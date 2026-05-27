@@ -1,0 +1,22 @@
+{
+  "name": "Raw Ubuntu Server (SSH Enabled)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+
+  // Installs and starts the native SSH server layer automatically at boot
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+
+  "remoteUser": "vscode"
+}
+
